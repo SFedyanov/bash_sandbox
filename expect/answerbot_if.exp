@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn ./questions_if.sh
+expect {
+  "*topic?" { send -- "Programming\r" }
+  "*movie?" { send -- "Star wars\r" }
+}
+expect eof
